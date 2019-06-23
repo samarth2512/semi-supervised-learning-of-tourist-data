@@ -1,0 +1,454 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import java.util.Comparator;
+import java.util.Collections;
+import java.util.Set;
+import java.util.TreeMap;
+import java.io.File;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.DriverManager;
+import java.sql.Connection;
+import ChartDirector.*;
+import java.util.Vector;
+import java.util.Vector;
+import org.jfree.chart.*;
+import org.jfree.chart.entity.*;
+import org.jfree.data.general.*;
+
+public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  static {
+    _jspx_dependants = new java.util.ArrayList<String>(1);
+    _jspx_dependants.add("/header2.jsp");
+  }
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n");
+      out.write("    \"http://www.w3.org/TR/html4/strict.dtd\"\n");
+      out.write("    >\n");
+  Vector s1=new Vector();
+    Vector s2=new Vector();
+    Vector s3=new Vector();
+    Vector s4=new Vector();
+    Vector s5=new Vector();
+    
+    Vector sc1=new Vector();
+    Vector sc2=new Vector();
+    Vector sc3=new Vector();
+    Vector sc4=new Vector();
+    Vector sc5=new Vector();
+    String name=new String();
+ 
+
+
+      out.write("\n");
+      out.write("\n");
+      out.write("     \n");
+      out.write("<head>    \n");
+      out.write("\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> \n");
+      out.write("\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> \n");
+      out.write("\t\t<title>tweet analysis</title>\n");
+      out.write("\t\t<meta name=\"description\" content=\"Simple Multi-Item Slider: Category slider with CSS animations\" />\n");
+      out.write("\t\t<meta name=\"keywords\" content=\"jquery plugin, item slider, categories, apple slider, css animation\" />\n");
+      out.write("\t\t<meta name=\"author\" content=\"Codrops\" />\n");
+      out.write("\t\t<link rel=\"shortcut icon\" href=\"../favicon.ico\"> \n");
+      out.write("\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" />\n");
+      out.write("                          <script src=\"js/modernizr.custom.63321.js\">         \n");
+      out.write("                </script>\n");
+      out.write("  <script type=\"text/javascript\" src=\"https://canvasjs.com/assets/script/canvasjs.min.js\"></script>\n");
+      out.write("    <script type=\"text/javascript\">\n");
+      out.write("\twindow.history.forward();\n");
+      out.write("\tfunction noBack(){ window.history.forward(); }\n");
+      out.write("    </script>\n");
+      out.write("                \n");
+      out.write("    ");
+ String pdt = null; String ver = null;
+      out.write("    \n");
+      out.write("    <script type=\"text/javascript\">  \n");
+      out.write("    \n");
+      out.write("function postToController() {\n");
+      out.write("    \n");
+      out.write("    var fn  = document.form1.filename.value;\n");
+      out.write("    //alert(document.form1.filename.value);\n");
+      out.write("\n");
+      out.write("    if(fn==\"\") {\n");
+      out.write("        alert(\"Please Fill the informations\");    \n");
+      out.write("    }\n");
+      out.write("    else{ \n");
+      out.write("        document.form1.action = \"./upload\";\n");
+      out.write("        document.form1.submit();\n");
+      out.write("      alert('Thanks for your information');\n");
+      out.write("    }\n");
+      out.write("}\n");
+      out.write("\n");
+      out.write("function a(k1,k2,k3,k4,k5) {\n");
+      out.write("    ///alert(\"hai\");\n");
+      out.write("   // alert(a);\n");
+      out.write("\tvar chart = new CanvasJS.Chart(\"chartContainer\",\n");
+      out.write("\t{\n");
+      out.write("\t\ttheme: \"theme2\",\n");
+      out.write("\t\ttitle:{\n");
+      out.write("\t\t\ttext: \"Gaming Consoles Sold in 2012\"\n");
+      out.write("\t\t},\t\t\n");
+      out.write("\t\tdata: [\n");
+      out.write("\t\t{       \n");
+      out.write("\t\t\ttype: \"pie\",\n");
+      out.write("\t\t\tshowInLegend: true,\n");
+      out.write("\t\t\ttoolTipContent: \"{y} - #percent %\",\n");
+      out.write("\t\t\tyValueFormatString: \"#,##0,,.## Million\",\n");
+      out.write("\t\t\tlegendText: \"{indexLabel}\",\n");
+      out.write("\t\t\tdataPoints: [\n");
+      out.write("\t\t\t\t\n");
+      out.write("\t\t\t\t{  y: k1, indexLabel: \"demonization_tweets\" },\n");
+      out.write("\t\t\t\t{  y: k2, indexLabel: \"karnatka_tweets\" },\n");
+      out.write("\t\t\t\t{  y: k3, indexLabel: \"kaveri_tweets\"},\n");
+      out.write("\t\t\t\t{  y: k4, indexLabel: \"karnatakapolling_tweets\" },\n");
+      out.write("\t\t\t\t{  y: k5, indexLabel: \"netural(common)_tweets\"},\n");
+      out.write("\t\t\t\n");
+      out.write("\t\t\t]\n");
+      out.write("\t\t}\n");
+      out.write("\t\t]\n");
+      out.write("\t});\n");
+      out.write("\tchart.render();\n");
+      out.write("}\n");
+      out.write("</script>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("</head>\n");
+      out.write("<style type=\"text/css\">\n");
+      out.write("    #wrapper {\n");
+      out.write("        width:450px;\n");
+      out.write("        margin:0 auto;\n");
+      out.write("        font-family:Verdana, sans-serif;\n");
+      out.write("    }\n");
+      out.write("    legend {\n");
+      out.write("        color:#0481b1;\n");
+      out.write("        font-size:16px;\n");
+      out.write("        padding:0 10px;\n");
+      out.write("        background:#fff;\n");
+      out.write("        -moz-border-radius:4px;\n");
+      out.write("        box-shadow: 0 1px 5px rgba(4, 129, 177, 0.5);\n");
+      out.write("        padding:5px 10px;\n");
+      out.write("        text-transform:uppercase;\n");
+      out.write("        font-family:Helvetica, sans-serif;\n");
+      out.write("        font-weight:bold;\n");
+      out.write("    }\n");
+      out.write("    fieldset {\n");
+      out.write("        border-radius:4px;\n");
+      out.write("        background: #fff; \n");
+      out.write("        background: -moz-linear-gradient(#fff, #f9fdff);\n");
+      out.write("        background: -o-linear-gradient(#fff, #f9fdff);\n");
+      out.write("        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f9fdff)); \n");
+      out.write("        background: -webkit-linear-gradient(#fff, #f9fdff);\n");
+      out.write("        padding:20px;\n");
+      out.write("        border-color:rgba(4, 129, 177, 0.4);\n");
+      out.write("    }\n");
+      out.write("    input,\n");
+      out.write("    textarea {\n");
+      out.write("        color: #373737;\n");
+      out.write("        background: #fff;\n");
+      out.write("        border: 1px solid #CCCCCC;\n");
+      out.write("        color: #aaa;\n");
+      out.write("        font-size: 14px;\n");
+      out.write("        line-height: 1.2em;\n");
+      out.write("        margin-bottom:15px;\n");
+      out.write("\n");
+      out.write("        -moz-border-radius:4px;\n");
+      out.write("        -webkit-border-radius:4px;\n");
+      out.write("        border-radius:4px;\n");
+      out.write("        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.2);\n");
+      out.write("    }\n");
+      out.write("    input[type=\"text\"],    \n");
+      out.write("    input[type=\"password\"]{\n");
+      out.write("        padding: 8px 6px;\n");
+      out.write("        height: 22px;\n");
+      out.write("        width:280px;\n");
+      out.write("    }\n");
+      out.write("    input[type=\"text\"]:focus,\n");
+      out.write("    input[type=\"password\"]:focus {\n");
+      out.write("        background:#f5fcfe;\n");
+      out.write("        text-indent: 0;\n");
+      out.write("        z-index: 1;\n");
+      out.write("        color: #373737;\n");
+      out.write("        -webkit-transition-duration: 400ms;\n");
+      out.write("        -webkit-transition-property: width, background;\n");
+      out.write("        -webkit-transition-timing-function: ease;\n");
+      out.write("        -moz-transition-duration: 400ms;\n");
+      out.write("        -moz-transition-property: width, background;\n");
+      out.write("        -moz-transition-timing-function: ease;\n");
+      out.write("        -o-transition-duration: 400ms;\n");
+      out.write("        -o-transition-property: width, background;\n");
+      out.write("        -o-transition-timing-function: ease;\n");
+      out.write("        //expand attribute\n");
+      out.write("        width: 350px;\n");
+      out.write("        \n");
+      out.write("        border-color:#ccc;\n");
+      out.write("        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);\n");
+      out.write("        opacity:0.6;\n");
+      out.write("    }\n");
+      out.write("    input[type=\"submit\"]{\n");
+      out.write("        background: #222;\n");
+      out.write("        border: none;\n");
+      out.write("        text-shadow: 0 -1px 0 rgba(0,0,0,0.3);\n");
+      out.write("        text-transform:uppercase;\n");
+      out.write("        color: #eee;\n");
+      out.write("        cursor: pointer;\n");
+      out.write("        font-size: 15px;\n");
+      out.write("        margin: 5px 0;\n");
+      out.write("        padding: 5px 22px;\n");
+      out.write("        -moz-border-radius: 4px;\n");
+      out.write("        border-radius: 4px;\n");
+      out.write("        -webkit-border-radius:4px;\n");
+      out.write("        -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);\n");
+      out.write("        -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);\n");
+      out.write("        box-shadow: 0px 1px 2px rgba(0,0,0,0.3);\n");
+      out.write("    }\n");
+      out.write("    textarea {\n");
+      out.write("        padding:3px;\n");
+      out.write("        width:96%;\n");
+      out.write("        height:100px;\n");
+      out.write("    }\n");
+      out.write("    textarea:focus {\n");
+      out.write("        background:#ebf8fd;\n");
+      out.write("        text-indent: 0;\n");
+      out.write("        z-index: 1;\n");
+      out.write("        color: #373737;\n");
+      out.write("        opacity:0.6;\n");
+      out.write("        box-shadow:0 0 5px rgba(4, 129, 177, 0.5);\n");
+      out.write("        border-color:#ccc;\n");
+      out.write("    }\n");
+      out.write("    .small {\n");
+      out.write("        line-height:14px;\n");
+      out.write("        font-size:12px;\n");
+      out.write("        color:#999898;\n");
+      out.write("        margin-bottom:3px;\n");
+      out.write("    }\n");
+      out.write("    \n");
+      out.write("    .styled-select select {\n");
+      out.write("        padding: 8px 6px;        \n");
+      out.write("        width:280px;\n");
+      out.write("   }\n");
+      out.write("   table, th, td {\n");
+      out.write("    border: 1px solid black;\n");
+      out.write("}\n");
+      out.write("</style>\n");
+      out.write(" \n");
+      out.write("<body bgcolor=\"black\" onload=\"noBack();\" onpageshow=\"if (event.persisted) noBack();\" onunload=\"\">\n");
+      out.write("    \n");
+      out.write("    ");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html lang=\"en\" class=\"no-js\">\n");
+      out.write("\t<head>\n");
+      out.write("\t\t<meta charset=\"UTF-8\" />\n");
+      out.write("\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> \n");
+      out.write("\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> \n");
+      out.write("\t\t<title>SociRank</title>\n");
+      out.write("\t\t<meta name=\"description\" content=\"Simple Multi-Item Slider: Category slider with CSS animations\" />\n");
+      out.write("\t\t<meta name=\"keywords\" content=\"jquery plugin, item slider, categories, apple slider, css animation\" />\n");
+      out.write("\t\t<meta name=\"author\" content=\"Codrops\" />\n");
+      out.write("\t\t<link rel=\"shortcut icon\" href=\"../favicon.ico\"> \n");
+      out.write("\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" />\n");
+      out.write("                          <script src=\"js/modernizr.custom.63321.js\">         \n");
+      out.write("                </script>\n");
+      out.write("                \n");
+      out.write("                \n");
+      out.write("<script type=\"text/javascript\">\n");
+      out.write("\n");
+      out.write("function logout() {    \n");
+      out.write("\talert('logout');\n");
+      out.write("\tdocument.form2.action = \"./logout\";\n");
+      out.write("        document.form2.submit();\n");
+      out.write("}\n");
+      out.write("</script>        \n");
+      out.write("                \n");
+      out.write("\t</head>\n");
+      out.write("\t<body bgcolor=\"#LIGHTBLUE\">\n");
+      out.write("            <form method=\"post\"  class=\"form\" name=\"form2\">  \n");
+      out.write("\t\t<div class=\"container\">\n");
+      out.write("\t\t\t\n");
+      out.write("\t\t\t<div class=\"codrops-top clearfix\">\t\t\t\t\n");
+      out.write("                                <a href=\"index.jsp\"><strong>Login </strong></a>\n");
+      out.write("                               \n");
+      out.write("                                <a href=\"logout.jsp\"><strong>Logout</strong></a>  \n");
+      out.write("                          \n");
+      out.write("\t\t\t</div>\n");
+      out.write("                      \n");
+      out.write("\t\t\t    <header class=\"clearfix\">      \n");
+      out.write("                            <img src=\"images/l.jpg\" width=\"120\" height=\"76\" align=\"left\"/>\n");
+      out.write("                            <br>                            \n");
+      out.write("                            <h1 style=\"color:red;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;online abuse\n");
+      out.write("Topics  </h1>\n");
+      out.write("                            <br>\n");
+      out.write("                            <br>\n");
+      out.write("                            \n");
+      out.write("\t\t\t    </header>\n");
+      out.write("                </div>\n");
+      out.write("            </form>\n");
+      out.write("        </body>\n");
+      out.write("</html>");
+      out.write("      \n");
+      out.write("    <form name=\"form1\" method=\"post\">\n");
+      out.write("        \n");
+      out.write("\t\t<tr>\n");
+      out.write("                    <td><img src=\"images/so.jpg\" width=\"690\" height=\"600\"/></td>\n");
+      out.write("\t\t</tr>\n");
+      out.write("\n");
+      out.write("    \n");
+      out.write("               \n");
+      out.write("            </fieldset>     \n");
+      out.write("        </tr>\n");
+      out.write("        </table>\n");
+      out.write("    \n");
+      out.write("    \n");
+      out.write("    \n");
+      out.write("    </form>\n");
+      out.write("        \n");
+      out.write("        <script type=\"text/javascript\">\n");
+      out.write("function a(k1,k2,k3,k4,k5) {\n");
+      out.write("    ///alert(\"hai\");\n");
+      out.write("    alert(k1+k2);\n");
+      out.write("\tvar chart = new CanvasJS.Chart(\"chartContainer\",\n");
+      out.write("\t{\n");
+      out.write("\t\ttheme: \"theme2\",\n");
+      out.write("\t\ttitle:{\n");
+      out.write("\t\t\ttext: \"categorization of tweets\"\n");
+      out.write("\t\t},\t\t\n");
+      out.write("\t\tdata: [\n");
+      out.write("\t\t{       \n");
+      out.write("\t\t\ttype: \"pie\",\n");
+      out.write("\t\t\tshowInLegend: true,\n");
+      out.write("\t\t\t\n");
+      out.write("\t\t\tlegendText: \"{indexLabel}\",\n");
+      out.write("\t\t\tdataPoints: [\n");
+      out.write("\t\t\t\t\n");
+      out.write("\t\t\t\t{  y: k1, indexLabel: \"demonization_tweets\" },\n");
+      out.write("\t\t\t\t{  y: k2, indexLabel: \"karnatka_tweets\" },\n");
+      out.write("\t\t\t\t{  y: k3, indexLabel: \"kaveri_tweets\"},\n");
+      out.write("\t\t\t\t{  y: k4, indexLabel: \"karnatakapolling_tweets\" },\n");
+      out.write("\t\t\t\t{  y: k5, indexLabel: \"netural(common)_tweets\"},\n");
+      out.write("\t\t\t\n");
+      out.write("\t\t\t]\n");
+      out.write("\t\t}\n");
+      out.write("\t\t]\n");
+      out.write("\t});\n");
+      out.write("\tchart.render();\n");
+      out.write("}\n");
+      out.write("</script>\n");
+      out.write("<script type=\"text/javascript\" src=\"https://canvasjs.com/assets/script/canvasjs.min.js\"></script></head>\n");
+      out.write("\n");
+      out.write("     ");
+
+                     try{
+                 int dcount=110;
+                  int kavcount=10;
+                   int kcount=10;
+                    int kpcount=10;
+                     int ccount=10;
+			
+                     
+                 
+      out.write("\n");
+      out.write("                  \n");
+      out.write("                 \n");
+      out.write("                 \n");
+      out.write("                 \n");
+      out.write("                 \n");
+      out.write("                 <div id=\"chartContainer\" style=\"height: 300px; width: 100%; display:inline;\"></div>\n");
+      out.write("                 <input type=\"submit\" value=\"Submit\" onclick=\"a('");
+      out.print( ccount);
+      out.write("','");
+      out.print(kcount);
+      out.write("','");
+      out.print(kavcount);
+      out.write("','");
+      out.print(kpcount);
+      out.write("','");
+      out.print(ccount);
+      out.write("')\">\n");
+      out.write("                 \n");
+      out.write("                 \n");
+      out.write("                 \n");
+      out.write("                 \n");
+      out.write("                 \n");
+      out.write("                  ");
+
+                             }
+                  catch(Exception e)
+                  {
+                      e.printStackTrace();
+                  }
+
+      out.write("\n");
+      out.write("\n");
+      out.write("        \n");
+      out.write("\n");
+      out.write("    </div>\n");
+      out.write("</body>\n");
+      out.write("\n");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}

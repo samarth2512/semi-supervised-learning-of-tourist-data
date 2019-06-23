@@ -1,0 +1,27 @@
+create databse hotel;
+
+use hotel;
+
+
+CREATE TABLE `user` (
+  `fname` varchar(200) DEFAULT NULL,
+  `lname` varchar(200) DEFAULT NULL,
+  `uname` varchar(200) DEFAULT NULL,
+  `pass` varchar(200) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `ph` varchar(200) DEFAULT NULL
+)
+CREATE TABLE 'tcounts' (
+  `hname` varchar(200) DEFAULT NULL,
+  `tweet` varchar(600) DEFAULT NULL,
+  `ctype` varchar(200) DEFAULT NULL,
+  `positive` varchar(200) DEFAULT NULL,
+  `negative` varchar(600) DEFAULT NULL,
+  `neutral` varchar(200) DEFAULT NULL
+) 
+CREATE TABLE `add_hotel` (
+  `hname` varchar(200) DEFAULT NULL,
+  `addr` varchar(600) DEFAULT NULL,
+  `path` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
+
